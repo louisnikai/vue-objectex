@@ -3,9 +3,9 @@ import {
 } from "@/index";
 
 describe('ObjectEx', () => {
-  it('Should not be undefined', () => {
+  it('Test import ObjectEx', () => {
     const target = ObjectEx;
-    console.log("Vue.defineField: ", target);
+    console.log("Test import ObjectEx result: ", target);
 
     expect(target).not.toBeUndefined();
   });
