@@ -29,6 +29,10 @@ export class ObjectEx {
               return this[`_${key}`];
             },
             set(newValue) {
+              let enumOption = this.keyOf(key);
+              if (!enumOption) return;
+              
+              enumOption.value = newValue;
               this[`_${key}`] = newValue;
             }
           }, true);

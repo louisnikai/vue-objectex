@@ -61,4 +61,12 @@ describe('ObjectEx', () => {
 
     expect(result).toEqual("Item 2");
   });
+
+  it('Test change item', () => {
+    objEx.item3 = 4;
+    let result = objEx.keyOf("item3").value;
+    console.log("Test prop extension result: ", result);
+
+    expect(result).toEqual(4);
+  });
 })

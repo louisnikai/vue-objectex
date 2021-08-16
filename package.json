@@ -1,6 +1,6 @@
 {
   "name": "vue-objectex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "Vue ObjectEx",
   "description": "An advanced object for vue, can be used as an enum.",
   "author": "Louis Ni <louisnikai@gmail.com>",
