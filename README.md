@@ -106,3 +106,11 @@ class UserManager extends ObjectEx {
 <br />
 <br />
 <br />
+
+# Change Log
+
+<a href="https://github.com/louisnikai/vue-objectex/blob/master/CHANGELOG.md">CHANGELOG.md</a>
+
+<br />
+<br />
+<br />

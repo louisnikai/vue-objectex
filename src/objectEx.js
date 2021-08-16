@@ -23,7 +23,15 @@ export class ObjectEx {
           value
         }) => {
           if (key === undefined || value === undefined) return;
-          this[key] = value;
+          this[`_${key}`] = value;
+          Vue.defineProperty(this, key, {
+            get() {
+              return this[`_${key}`];
+            },
+            set(newValue) {
+              this[`_${key}`] = newValue;
+            }
+          }, true);
         });
         enumOptions = options;
 
