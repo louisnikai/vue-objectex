@@ -14,7 +14,7 @@ export class ObjectEx {
     let enumFuncExtensions;
     let enumDefineProps;
 
-    class ObjectEx {
+    ObjectEx.ObjectEx = class {
       constructor(options, funcExtensions, defineProps) {
         if (_typeOf(options) !== "array")
           throw "items is not an array.";
@@ -31,7 +31,7 @@ export class ObjectEx {
             set(newValue) {
               let enumOption = this.keyOf(key);
               if (!enumOption) return;
-              
+
               enumOption.value = newValue;
               this[`_${key}`] = newValue;
             }
@@ -125,6 +125,6 @@ export class ObjectEx {
       }
     }
 
-    return new ObjectEx(options, funcExtensions, defineProps);
+    return new ObjectEx.ObjectEx(options, funcExtensions, defineProps);
   }
 }
