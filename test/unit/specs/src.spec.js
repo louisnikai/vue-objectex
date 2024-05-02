@@ -36,7 +36,7 @@ describe('ObjectEx', () => {
   });
 
   it('Test ObjectEx instance', () => {
-    console.log("Test ObjectEx instance result: ", JSON.stringify(objEx), objEx instanceof ObjectEx, objEx instanceof ObjectEx.ObjectEx);
+    console.log("Test ObjectEx instance result: ", JSON.stringify(objEx), objEx instanceof ObjectEx, objEx instanceof objEx.__instanceType__, objEx.__factoryType__ === ObjectEx);
 
     expect(objEx).toHaveProperty("item1");
   });

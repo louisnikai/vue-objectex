@@ -10,6 +10,10 @@
 
 - Change codes: could use [instanceof ObjectEx.ObjectEx] for check.
 
+### v1.0.4
+
+- Change codes: could use [__instanceType__] and [__factoryType__] for check.
+
 <br />
 <br />
 <br />

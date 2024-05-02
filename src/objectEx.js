@@ -9,12 +9,12 @@ const _typeOf = (value) => {
 };
 
 export class ObjectEx {
-  constructor(options, funcExtensions, defineProps) {
+  constructor(options, funcExtensions, defineProps, factoryType = null) {
     let enumOptions;
     let enumFuncExtensions;
     let enumDefineProps;
 
-    ObjectEx.ObjectEx = class {
+    class _ObjectEx {
       constructor(options, funcExtensions, defineProps) {
         if (_typeOf(options) !== "array")
           throw "items is not an array.";
@@ -124,7 +124,9 @@ export class ObjectEx {
         return enumDefineProps;
       }
     }
+    _ObjectEx.prototype.__instanceType__ = _ObjectEx;
+    _ObjectEx.prototype.__factoryType__ = factoryType || ObjectEx;
 
-    return new ObjectEx.ObjectEx(options, funcExtensions, defineProps);
+    return new _ObjectEx(options, funcExtensions, defineProps);
   }
 }
